@@ -15,3 +15,4 @@ install:
 * [vim-airline](https://github.com/vim-airline/vim-airline)
 * [fzf](https://github.com/junegunn/fzf)
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
+* [tldr](https://github.com/tldr-pages/tldr)
