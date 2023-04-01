@@ -1,11 +1,21 @@
 # oh-my-zsh install
-export ZSH="/Users/lillian/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # plugins
-plugins=(git zsh-syntax-highlighting)
+plugins=(git macos colored-man-pages zsh-syntax-highlighting)
 
 # source oh-my-zsh
 source $ZSH/oh-my-zsh.sh
+
+# terminal prompt
+# https://dev.to/cassidoo/customizing-my-zsh-prompt-3417
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+zstyle ':vcs_info:git:*' formats '%b '
+
+setopt PROMPT_SUBST
+PROMPT='%F{green}%*%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
 
 # aliases
 alias cat=bat
